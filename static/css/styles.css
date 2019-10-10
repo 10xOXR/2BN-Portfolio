@@ -1,3 +1,10 @@
+/*-------------------------- GLOBAL --------------------------*/
+
+* {
+    scroll-behavior: smooth;
+}
+
+
 body {
     display: flex;
     min-height: 100vh;
@@ -6,4 +13,57 @@ body {
 
 main {
     flex: 1 0 auto;
+}
+
+/*-------------------------- NAVBAR --------------------------*/
+
+nav {
+    position: sticky;
+    top: 0;
+}
+
+nav .brand-logo {
+    padding: 0 15px 0 15px;
+}
+
+/*-------------------------- LANDING SECTION / HERO IMAGE --------------------------*/
+
+#hero-landing {
+    background-image: url('https://via.placeholder.com/800x500.png?text=Chris+Quinn+|+Developer');
+    min-height: 90vh;
+    width: 100%;
+}
+
+/*-------------------------- ABOUT SECTION --------------------------*/
+
+#about {
+    min-height: 50vh;
+    background-color: #ddd;
+}
+
+/*-------------------------- RECENT PROJECTS SECTION --------------------------*/
+
+#recent {
+    min-height: 50vh;
+    background-color: #fff;
+}
+
+/*-------------------------- SKILLS SECTION --------------------------*/
+
+#skills {
+    min-height: 50vh;
+    background-color: #ddd;
+}
+
+/*-------------------------- CONTACT SECTION --------------------------*/
+
+#contact {
+    min-height: 50vh;
+    background-color: #fff;
+}
+
+/*-------------------------- FOOTER --------------------------*/
+
+.page-footer {
+    padding: 0;
 }
