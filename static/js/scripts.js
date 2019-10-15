@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(() => {
 
     $("a").click(function (event) {
         if (this.hash !== "") {
@@ -10,6 +10,10 @@ $(document).ready(function() {
         }
     });
 
-    $(".sidenav").sidenav({edge: "right"});
+    $(".sidenav").sidenav({
+        edge: "right"
+    });
+
+    $('textarea#textarea1').characterCounter();
 
 });

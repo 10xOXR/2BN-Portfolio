@@ -1,75 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-        />
-        <link rel="stylesheet" href="static/css/styles.css" />
-        <title>Chris Quinn | Developer</title>
-    </head>
-    <body id="home">
-        <section id="hero-landing"></section>
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#home" class="brand-logo">Logo</a>
-                <a
-                    href="#"
-                    data-target="mobile-demo"
-                    class="right sidenav-trigger"
-                    ><i class="fas fa-bars"></i
-                ></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#recent">Recent Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link rel="stylesheet" href="static/css/styles.css" />
+    <title>Chris Quinn | Developer</title>
+</head>
+
+<body id="home">
+    <section id="hero-landing"></section>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#home" class="brand-logo">Logo</a>
+            <a href="#" data-target="mobile-demo" class="right sidenav-trigger"><i class="fas fa-bars"></i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Recent Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+        <li class="sidenav-close"><a href="#home">Home</a></li>
+        <li class="sidenav-close"><a href="#about">About Me</a></li>
+        <li class="sidenav-close"><a href="#projects">Recent Projects</a></li>
+        <li class="sidenav-close"><a href="#skills">Skills</a></li>
+        <li class="sidenav-close"><a href="#contact">Contact</a></li>
+    </ul>
+
+    <main>
+        <section id="about">
+            <div class="row">
+                <div class="col s12 m6 chris-avatar">
+                    <!-- <img src="static/img/chris-avatar.png" alt="Chris Quinn"> -->
+                    <img src="static/img/chris-original.png" class="chris-original" alt="Chris Quinn">
+                    <img src="static/img/chris-overlay.png" class="chris-overlay" alt="Chris Quinn">
+                </div>
+                <div class="col s12 m6 about-text">
+                    <h2 class="center">Who am I?</h2>
+                    <ul>
+                        <li>A massive geek</li>
+                        <li>Forever curious about how things work and making them better</li>
+                        <li>Happiest when working technical challenges through to creative solutions</li>
+                        <li>Fascinated with technologies past, present, and on the bleeding-edge of what’s possible</li>
+                        <li>Expert at converting ordinary coffee into code</li>
+                    </ul>
+                    <p>I’m a Full Stack Developer that loves to find the best solution to any given task, often in ways
+                        that
+                        aren’t immediately obvious! Whatever the task, I write clean, efficient code that delivers
+                        rock-solid reliability and a great user experience.
+                    </p>
+                    <p>Have a look at some of my recent work below, and the skills that I’ve learned along the way.</p>
+                </div>
             </div>
-        </nav>
-        <ul class="sidenav" id="mobile-demo">
-            <li class="sidenav-close"><a href="#home">Home</a></li>
-            <li class="sidenav-close"><a href="#about">About Me</a></li>
-            <li class="sidenav-close"><a href="#recent">Recent Projects</a></li>
-            <li class="sidenav-close"><a href="#skills">Skills</a></li>
-            <li class="sidenav-close"><a href="#contact">Contact</a></li>
-        </ul>
+        </section>
 
-        <main>
-            <section id="about">
-                About Me
-            </section>
-            <section id="recent">
-                Recent Projects
-            </section>
-            <section id="skills">
-                Skills
-            </section>
-            <section id="contact">
-                Contact
-            </section>
-        </main>
+        <section id="projects">
+            <h2 class="center-align">Recent Projects</h2>
+        </section>
 
-        <footer class="page-footer">
-            <div>
-                <p class="center-align">© 2019 Copyright Text</p>
+        <section id="skills">
+            <h2 id="skill-heading">Skills</h2>
+            <div id="skill-tiles"></div>
+        </section>
+
+        <section id="contact">
+            <h2 class="center-align">Let's do this!</h2>
+            <p class="center-align">If you're looking to collaborate on a project, turn your ideas into something awesome,
+                or discuss something more permanent, then fill in the form below and let's get the ball rolling!</p>
+            <div class="row">
+                <div class="col s12 m6 offset-m3">
+                    <form id="form" action="form-to-email.php" method="POST" name="myemailform">
+                        <!-- Name -->
+                        <div class="input-field">
+                            <label for="name">Name</label>
+                            <input class="validate" type="text" name="name" required>
+                        </div>
+                        <!-- Email -->
+                        <div class="input-field">
+                            <label for="email">Email</label>
+                            <input class="validate" type="email" name="email" required>
+                        </div>
+                        <!-- Subject -->
+                        <div class="input-field">
+                            <label for="subject">Subject</label>
+                            <input class="validate" type="text" name="subject" required>
+                        </div>
+                        <!-- Message -->
+                        <div class="input-field">
+                            <label for="text-area">Message</label>
+                            <textarea class="materialize-textarea validate" type="input-field" name="message"
+                                required></textarea>
+                        </div>
+                        <!-- Submit -->
+                        <input class="btn" id="submit" type="submit" value="Submit">
+                    </form>
+                </div>
             </div>
-        </footer>
-    </body>
+        </section>
+    </main>
 
-    <script
-        src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="static/js/scripts.js"></script>
+    <footer class="page-footer">
+        <div>
+            <p class="center-align">© 2019 Chris Quinn</p>
+        </div>
+    </footer>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="static/js/scripts.js"></script>
+<script src="static/js/skills.js"></script>
+<script src="static/js/projects.js"></script>
+
 </html>

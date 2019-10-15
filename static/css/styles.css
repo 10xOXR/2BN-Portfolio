@@ -4,7 +4,6 @@
     scroll-behavior: smooth;
 }
 
-
 body {
     display: flex;
     min-height: 100vh;
@@ -20,6 +19,9 @@ main {
 nav {
     position: sticky;
     top: 0;
+    line-height: 56px;
+    height: 56px;
+    z-index: 10;
 }
 
 nav .brand-logo {
@@ -29,7 +31,7 @@ nav .brand-logo {
 /*-------------------------- LANDING SECTION / HERO IMAGE --------------------------*/
 
 #hero-landing {
-    background-image: url('https://via.placeholder.com/800x500.png?text=Chris+Quinn+|+Developer');
+    background-image: url("https://via.placeholder.com/800x500.png?text=Chris+Quinn+|+Developer");
     min-height: 90vh;
     width: 100%;
 }
@@ -41,19 +43,226 @@ nav .brand-logo {
     background-color: #ddd;
 }
 
+.chris-avatar {
+    margin: 20px auto;
+    position: relative;
+}
+
+.chris-avatar img {
+    height: 100%;
+    position: absolute;
+    width: 350px;
+    height: 300px;
+    border-radius: 1em;
+    transition: all 1s ease-in-out;
+}
+
+.chris-original {
+    box-shadow: 2px 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+.chris-overlay {
+    opacity: 0;
+}
+
+.chris-avatar:hover .chris-overlay {
+    opacity: 1;
+}
+
+.chris-overlay {
+    opacity: 0;
+}
+
+.chris-avatar:hover .chris-original {
+    opacity: 0.5;
+    background-color: white;
+}
+
+.about-text ul li {
+    list-style-type: disc;
+    margin-left: 1em;
+}
+
 /*-------------------------- RECENT PROJECTS SECTION --------------------------*/
 
-#recent {
+#projects {
     min-height: 50vh;
     background-color: #fff;
+    margin: 0 auto;
+}
+
+#projects ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 1em;
+}
+
+#projects img {
+    width: 100%;
+    border-radius: 8px;
 }
 
 /*-------------------------- SKILLS SECTION --------------------------*/
 
 #skills {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "skill-heading"
+    "skill-tiles";
+    background-color: #000;
     min-height: 50vh;
-    background-color: #ddd;
 }
+
+#skill-heading {
+    grid-area: skill-heading;
+    color: #fff;
+    margin: 0 auto;
+}
+
+#skill-tiles {
+    grid-area: skill-tiles;
+    display: grid;
+    grid-template-columns: 1fr, 50vw, 1fr;
+    grid-template-areas: ". skill-list .";
+    background-color: #000;
+    margin: 20px 0;
+}
+
+#skill-tiles ul {
+    grid-area: skill-list;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(75px, 110px));
+    margin: 0 auto;
+}
+
+#skill-tiles ul li {
+    position: relative;
+    margin: 1px;
+    padding: 12px;
+    min-height: 120px;
+    border-radius: 3px;
+    background-image: url("/static/img/old-rice-paper.jpg");
+}
+
+#skill-tiles ul li h3,
+#skill-tiles ul li h6 {
+    margin: 0;
+    /* z-index: 5; */
+    color: black;
+}
+
+#skill-tiles ul li h3 {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+#skill-tiles ul li span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 12px 6px;
+    border-radius: 3px;
+}
+
+.html {
+    background-color: rgba(241, 101, 41, 0.6);
+}
+
+.css {
+    background-color: rgba(41, 101, 241, 0.6);
+}
+
+.sass {
+    background-color: rgba(213, 111, 164, 0.6);
+}
+
+.javascript {
+    background-color: rgba(255, 218, 62, 0.6);
+}
+
+.jquery {
+    background-color: rgba(7, 105, 173, 0.6);
+}
+
+.dc {
+    background-color: rgba(246, 152, 55, 0.6);
+}
+
+.d3 {
+    background-color: rgba(213, 107, 77, 0.6);
+}
+
+.bootstrap {
+    background-color: rgba(86, 61, 124, 0.6);
+}
+
+.materialize {
+    background-color: rgba(235, 112, 119, 0.6);
+}
+
+.json {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.python {
+    background-color: rgba(54, 108, 153, 0.6);
+}
+
+.flask {
+    background-color: rgba(211, 211, 211, 0.6);
+}
+
+.django {
+    background-color: rgba(16, 62, 46, 0.6);
+}
+
+.mysql {
+    background-color: rgba(55, 101, 175, 0.6);
+}
+
+.postgresql {
+    background-color: rgba(51, 103, 145, 0.6);
+}
+
+.mongodb {
+    background-color: rgba(119, 181, 98, 0.6);
+}
+
+.vscode {
+    background-color: rgba(0, 129, 207, 0.6);
+}
+
+.linux {
+    background-color: rgba(240, 155, 0, 0.6);
+}
+
+.git {
+    background-color: rgba(240, 80, 51, 0.6);
+}
+
+.github {
+    background-color: rgba(176, 176, 176, 0.6);
+}
+
+.aws {
+    background-color: rgba(255, 153, 0, 0.6);
+}
+
+.jasmine {
+    background-color: rgba(138, 65, 130, 0.6);
+}
+
+.heroku {
+    background-color: rgba(103, 98, 166, 0.6);
+}
+
+.travisci {
+    background-color: rgba(201, 51, 72, 0.6);
+}
+
 
 /*-------------------------- CONTACT SECTION --------------------------*/
 
@@ -62,8 +271,40 @@ nav .brand-logo {
     background-color: #fff;
 }
 
+#success-message {
+    width: 100%; 
+    height: 100%; 
+    display: none; 
+}
+
+#error-message {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
 /*-------------------------- FOOTER --------------------------*/
 
 .page-footer {
     padding: 0;
+}
+
+/*-------------------------- MEDIA QUERIES --------------------------*/
+
+@media (max-width: 620px) {
+    #skill-tiles ul {
+        grid-template-columns: repeat(4, minmax(75px, 110px));
+    }
+
+    #projects {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "milestone-1"
+            "milestone-2"
+            "milestone-4"
+            "milestone-5";
+        min-height: 50vh;
+        background-color: #fff;
+        margin: 0 auto;
+    }
 }
