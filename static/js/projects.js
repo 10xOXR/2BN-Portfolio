@@ -51,6 +51,13 @@ $(document).ready(() => {
         "' alt='" +
         name.alt +
         "'></figure>"
+
+        proj_list += "<a href='" +
+        name.repo +
+        "' class='btn' target='_blank'><i class='fab fa-github right' aria-hidden='true'></i>REPO</a>";
+        proj_list += "<a href='" +
+        name.site +
+        "' class='btn' target='_blank'><i class='fas fa-link right' aria-hidden='true'></i>LIVE</a>";
     });
 
     proj_list += "<ul>"

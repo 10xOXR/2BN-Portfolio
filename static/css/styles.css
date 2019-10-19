@@ -151,7 +151,7 @@ nav .brand-logo {
 #skill-tiles {
     grid-area: skill-tiles;
     display: grid;
-    grid-template-columns: 1fr, 50vw, 1fr;
+    grid-template-columns: 1fr, 40vw, 1fr;
     grid-template-areas: ". skill-list .";
     background-color: #000;
     margin: 20px 0;
