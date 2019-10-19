@@ -2,12 +2,14 @@
 
 * {
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 main {
@@ -22,19 +24,38 @@ nav {
     line-height: 56px;
     height: 56px;
     z-index: 10;
+    background-color: #000;
 }
 
 nav .brand-logo {
-    padding: 0 15px 0 15px;
+    padding: 0 15px;
 }
 
 /*-------------------------- LANDING SECTION / HERO IMAGE --------------------------*/
 
 #hero-landing {
-    background-image: url("https://via.placeholder.com/800x500.png?text=Chris+Quinn+|+Developer");
-    min-height: 90vh;
-    width: 100%;
+    position: relative;
+    height: 90vh;
+    width: 100vw;
+    background-color: #ddd;
 }
+
+#hero-title {
+    position: absolute;
+    color: #fff;
+    z-index: 3;
+    padding: 10vh 0 0 10vw;
+}
+
+/* #hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+} */
 
 /*-------------------------- ABOUT SECTION --------------------------*/
 
@@ -107,15 +128,22 @@ nav .brand-logo {
 #skills {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: 
-    "skill-heading"
-    "skill-tiles";
+    grid-template-areas:
+        "skill-heading"
+        "skills-text"
+        "skill-tiles";
     background-color: #000;
     min-height: 50vh;
 }
 
 #skill-heading {
     grid-area: skill-heading;
+    color: #fff;
+    margin: 0 auto;
+}
+
+#skills-text {
+    grid-area: skills-text;
     color: #fff;
     margin: 0 auto;
 }
@@ -272,9 +300,9 @@ nav .brand-logo {
 }
 
 #success-message {
-    width: 100%; 
-    height: 100%; 
-    display: none; 
+    width: 100%;
+    height: 100%;
+    display: none;
 }
 
 #error-message {
@@ -287,6 +315,7 @@ nav .brand-logo {
 
 .page-footer {
     padding: 0;
+    background-color: #000;
 }
 
 /*-------------------------- MEDIA QUERIES --------------------------*/
@@ -298,7 +327,7 @@ nav .brand-logo {
 
     #projects {
         grid-template-columns: 1fr;
-        grid-template-areas: 
+        grid-template-areas:
             "milestone-1"
             "milestone-2"
             "milestone-4"
