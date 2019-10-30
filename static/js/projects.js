@@ -40,13 +40,13 @@ $(document).ready(() => {
             ]
         },
     ];
-
+    
     let proj_list =  "<ul>";
 
     projects.map(name => {
-        proj_list += "<li><figcaption class='center-align'>" +
+        proj_list += "<li class='center-align'><figure><figcaption>" +
         name.name + "</figcaption>" +
-        "<figure><img src='" +
+        "<img src='" +
         name.img +
         "' alt='" +
         name.alt +
@@ -54,13 +54,13 @@ $(document).ready(() => {
 
         proj_list += "<a href='" +
         name.repo +
-        "' class='btn' target='_blank'><i class='fab fa-github right' aria-hidden='true'></i>REPO</a>";
+        "' class='btn' target='_blank'><i class='fab fa-github right' aria-hidden='true'></i>REPO</a>" + "&nbsp";
         proj_list += "<a href='" +
         name.site +
         "' class='btn' target='_blank'><i class='fas fa-link right' aria-hidden='true'></i>LIVE</a>";
     });
 
-    proj_list += "<ul>"
+    proj_list += "<ul>";
 
     $("#projects").append(proj_list);
 
