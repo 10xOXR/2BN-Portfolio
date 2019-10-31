@@ -1,120 +1,28 @@
 $(document).ready(() => {
 
     let skills = [
-        {
-            symbol: "Ht",
-            name: "HTML"
-        },
-        {
-            symbol: "Cs",
-            name: "CSS"
-        },
-        {
-            symbol: "Ss",
-            name: "Sass"
-        },
-        {
-            symbol: "Js",
-            name: "JavaScript"
-        },
-        {
-            symbol: "Jq",
-            name: "jQuery"
-        },
-        {
-            symbol: "Dc",
-            name: "DC"
-        },
-        {
-            symbol: "D",
-            name: "D3"
-        },
-        {
-            symbol: "Bs",
-            name: "Bootstrap"
-        },
-        {
-            symbol: "Mz",
-            name: "Materialize"
-        },
-        {
-            symbol: "J",
-            name: "JSON"
-        },
-        {
-            symbol: "Py",
-            name: "Python"
-        },
-        {
-            symbol: "Fl",
-            name: "Flask"
-        },
-        {
-            symbol: "Dj",
-            name: "Django"
-        },
-        {
-            symbol: "My",
-            name: "MySQL"
-        },
-        {
-            symbol: "Pg",
-            name: "PostgreSQL"
-        },
-        {
-            symbol: "Md",
-            name: "MongoDB"
-        },
-        {
-            symbol: "Vs",
-            name: "VSCode"
-        },
-        {
-            symbol: "Lx",
-            name: "Linux"
-        },
-        {
-            symbol: "Gt",
-            name: "Git"
-        },
-        {
-            symbol: "Gh",
-            name: "GitHub"
-        },
-        {
-            symbol: "Aw",
-            name: "AWS"
-        },
-        {
-            symbol: "Ja",
-            name: "Jasmine"
-        },
-        {
-            symbol: "Hu",
-            name: "Heroku"
-        },
-        {
-            symbol: "Tr",
-            name: "TravisCI"
-        },
+        "HTML", "CSS", "Sass", "JavaScript", "jQuery", "DC.js",
+        "D3.js", "Bootstrap", "Materialize", "JSON", "Python",
+        "Flask", "Django", "MySQL", "PostgreSQL", "MongoDB",
+        "VSCode", "Linux", "Git", "GitHub", "AWS", "Jasmine",
+        "Heroku", "TravisCI"
     ]
 
-    let li_list = "<ul>";
+    let skill_list = "";
+    let i = 0;
 
-    skills.map((symbol, index) => {
-        let i = index + 1;
-        li_list += "<li><span class='" +
-            symbol.name.toLowerCase() +
-            "'><h6>" +
-            i +
-            "</h6><h3 class='center-align'>" +
-            symbol.symbol +
-            "</h3><h6 class='center-align'>" +
-            symbol.name +
-            "</h6></span></li>"
+    skills.map(() => {
+        skill_list += "<figure><figcaption>" +
+            skills[i] +
+            "</figcaption>" +
+            "<img src='static/img/skills/" +
+            skills[i].toLowerCase() +
+            ".png' alt='" +
+            skills[i] +
+            "'></figure>";
+        i += 1;
+
     });
 
-    li_list += "</ul>"
-
-    $("#skill-tiles").append(li_list);
+    $(".skill-tiles").append(skill_list);
 });

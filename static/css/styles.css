@@ -5,6 +5,16 @@
     src: url("/static/fonts/PressStart2P-Regular.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "Inconsolata-regular";
+    src: url("/static/fonts/Inconsolata-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Inconsolata-bold";
+    src: url("/static/fonts/Inconsolata-Bold.ttf") format("truetype");
+}
+
 * {
     scroll-behavior: smooth;
     box-sizing: border-box;
@@ -293,12 +303,13 @@ nav ul a {
 }
 
 .skill-tiles figure {
+    position: relative;
     overflow: hidden;
+    font-family: "Inconsolata-bold";
     border: 3px solid lime;
     border-radius: 8px;
     background-color: rgba(0, 255, 0, 0.2);
     margin: 15px;
-    transition: all .3s ease-in-out;
 }
 
 .skill-tiles figure img {
@@ -307,7 +318,28 @@ nav ul a {
 }
 
 .skill-tiles figure:hover img {
-    transform: scale(1.5);
+    transform: scale(1.25);
+}
+
+.skill-tiles figure figcaption {
+    position: absolute;
+    opacity: 0;
+    background-color: rgba(13, 137, 13, 0.8);
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 2em;
+    transition: all .5s ease-in-out;
+    top: -35vh;
+    z-index: 5;
+    text-align: center;
+    padding: 2.4em 0;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+
+.skill-tiles figure:hover figcaption {
+    opacity: 1;
+    top: 0;
 }
 
 /*-------------------------- CONTACT SECTION --------------------------*/
