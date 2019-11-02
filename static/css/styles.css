@@ -1,5 +1,7 @@
 /*-------------------------- GLOBAL --------------------------*/
 
+/* FONTS */
+
 @font-face {
     font-family: "Press Start 2P";
     src: url("/static/fonts/PressStart2P-Regular.ttf") format("truetype");
@@ -13,6 +15,28 @@
 @font-face {
     font-family: "Inconsolata-bold";
     src: url("/static/fonts/Inconsolata-Bold.ttf") format("truetype");
+}
+
+/* ROOT VARS */
+
+:root {
+    --Amber: 239, 121, 0;
+    --LightAmber: 255, 170, 16;
+    --DarkAmber: 80, 20, 0;
+}
+
+/* HEADING SIZES */
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1em;
 }
 
 * {
@@ -150,6 +174,12 @@ nav {
 nav ul a {
     color: lime;
     font-family: "Press Start 2P";
+    transition: all .3s ease-in-out;
+}
+
+nav ul a:hover,
+.active-section {
+    color: rgba(var(--Amber), 1);
 }
 
 .brand-logo img {
@@ -171,7 +201,12 @@ nav ul a {
 
 #about {
     min-height: 50vh;
+    font-family: "Inconsolata-bold";
     background-color: #ddd;
+}
+
+#about h2 {
+    font-family: 'Press Start 2P', cursive;
 }
 
 .chris-avatar {
@@ -270,6 +305,10 @@ nav ul a {
     background: transparent;
 } */
 
+#projects h2 {
+    font-family: "Press Start 2P";
+}
+
 #projects a {
     margin-bottom: 10px;
 }
@@ -282,9 +321,10 @@ nav ul a {
     grid-template-rows: repeat(auto-fill, 100px);
     grid-template-areas: 
         "skills-heading"
+        "skills-para"
         "skill-tiles";
     align-items: center;
-    background-color: #000;
+    background: radial-gradient(circle, rgba(var(--DarkAmber), 1) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
 #skill-heading {
@@ -292,7 +332,15 @@ nav ul a {
     color: lime;
     font-family: "Press Start 2P";
     margin: 0 auto;
-    font-size: 2em;
+}
+
+#skills p {
+    grid-area: skills para;
+    font-family: "Inconsolata-bold";
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 0 2em 1em 2em;
 }
 
 .skill-tiles {
@@ -310,6 +358,7 @@ nav ul a {
     border-radius: 8px;
     background-color: rgba(0, 255, 0, 0.2);
     margin: 15px;
+    transition: all .3s ease-in-out;
 }
 
 .skill-tiles figure img {
@@ -324,7 +373,7 @@ nav ul a {
 .skill-tiles figure figcaption {
     position: absolute;
     opacity: 0;
-    background-color: rgba(13, 137, 13, 0.8);
+    background-color: rgba(var(--Amber), 0.7);
     width: 100%;
     height: 100%;
     color: #fff;
@@ -337,16 +386,31 @@ nav ul a {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
 }
 
+.skill-tiles figure:hover {
+    border: 3px solid rgba(var(--Amber), 1);
+    background-color: rgba(var(--Amber ), 0.2);
+}
+
 .skill-tiles figure:hover figcaption {
     opacity: 1;
     top: 0;
+    transition-delay: 0.1s;
 }
 
 /*-------------------------- CONTACT SECTION --------------------------*/
 
 #contact {
+    font-family: "Inconsolata-bold";
     min-height: 50vh;
-    background-color: #fff;
+}
+
+#contact h2 {
+    font-family: 'Press Start 2P', cursive;
+}
+
+#contact p {
+    font-size: 1.5em;
+    padding: 0 2em;
 }
 
 /*-------------------------- FOOTER --------------------------*/

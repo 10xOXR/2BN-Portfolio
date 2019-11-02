@@ -20,6 +20,42 @@ $(document).ready(() => {
 
     $("textarea#textarea1").characterCounter();
 
+    //-------------------- NAVBAR --------------------//
+
+    $(window).on("scroll resize load", () => {
+        const top = $("#hero-landing").offset().top - 200;
+        const about = $("#about").offset().top - 200;
+        const projects = $("#projects").offset().top - 200;
+        const skills = $("#skills").offset().top - 200;
+        const contact = $("#contact").offset().top - 500;
+
+        if ($(window).scrollTop() >= top && $(window).scrollTop() <= about) {
+            $("#nav-home").addClass("active-section");
+        } else {
+            $("#nav-home").removeClass("active-section");
+        }
+        if ($(window).scrollTop() >= about && $(window).scrollTop() <= projects) {
+            $("#nav-about").addClass("active-section");
+        } else {
+            $("#nav-about").removeClass("active-section");
+        }
+        if ($(window).scrollTop() >= projects && $(window).scrollTop() <= skills) {
+            $("#nav-projects").addClass("active-section");
+        } else {
+            $("#nav-projects").removeClass("active-section");
+        }
+        if ($(window).scrollTop() >= skills && $(window).scrollTop() <= contact) {
+            $("#nav-skills").addClass("active-section");
+        } else {
+            $("#nav-skills").removeClass("active-section");
+        }
+        if ($(window).scrollTop() >= contact) {
+            $("#nav-contact").addClass("active-section");
+        } else {
+            $("#nav-contact").removeClass("active-section");
+        }
+    });
+
     //-------------------- HERO SECTION --------------------//
 
     consoleText(["Hello World.", "My name is Chris.", "I'm a Full Stack Developer.", "Let's make something awesome!"], "text");
