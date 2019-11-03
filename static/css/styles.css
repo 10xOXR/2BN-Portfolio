@@ -112,6 +112,10 @@ main {
     animation: textShadow 1.6s infinite;
 }
 
+.shadows {
+    animation: textShadow 1.6s infinite;
+}
+
 @keyframes flicker {
     0% {opacity: 0.27861;}
     5% {opacity: 0.34769;}
@@ -169,6 +173,8 @@ nav {
     height: 56px;
     z-index: 10;
     background-color: #000;
+    border-top: 1px solid #000;
+    box-shadow: 0 4px 16px 0 rgba(var(--Amber), 0.5);
 }
 
 nav ul a {
@@ -182,66 +188,79 @@ nav ul a:hover,
     color: rgba(var(--Amber), 1);
 }
 
+.sidenav-trigger .fas {
+    color: lime;
+}
+
+#mobile-menu {
+    display: grid;
+    align-items: center;
+    justify-items: center;;
+    grid-template-columns: 1fr;
+    background-color: #000;
+    font-family: "Press Start 2P";
+}
+
+#mobile-menu img {
+    display: flex;
+    align-self: flex-start;
+    width: 100%;
+    padding: 20px 5px;
+    border-top: 3px solid rgba(var(--Amber), 1);
+    border-bottom: 3px solid rgba(var(--Amber), 1);
+    background: radial-gradient(circle, rgba(var(--DarkAmber), 1) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+#sidenav-home {
+    align-items: unset;
+}
+
+.sidenav-footer {
+    color: lime;
+    font-size: 3em;
+    text-align: center;
+}
+
+.sidenav-footer a i {
+    color: lime;
+}
+
 .brand-logo img {
     margin: 3px;
     width: 300px;
 }
 
-.sidenav-trigger .fas,
-.sidenav li a {
-    color: lime;
-}
-
-#mobile-menu {
-    background-color: #000;
-    font-family: "Press Start 2P";
-}
-
 /*-------------------------- ABOUT SECTION --------------------------*/
 
 #about {
-    min-height: 50vh;
     font-family: "Inconsolata-bold";
-    background-color: #ddd;
+    background: radial-gradient(circle, rgba(var(--DarkAmber), 1) 0%, rgba(0, 0, 0, 1) 100%);
+    padding-bottom: 30px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    border-bottom: 3px solid rgba(var(--Amber), 1);
 }
 
 #about h2 {
     font-family: 'Press Start 2P', cursive;
+    color: lime;
 }
 
 .chris-avatar {
-    margin: 20px auto;
-    position: relative;
+    margin-top: 8em;
 }
 
 .chris-avatar img {
     height: 100%;
-    position: absolute;
-    width: 350px;
-    height: 300px;
+    width: 10em;
+    height: 20em;
     border-radius: 1em;
-    transition: all 1s ease-in-out;
 }
 
-.chris-original {
-    box-shadow: 2px 8px 12px rgba(0, 0, 0, 0.5);
-}
-
-.chris-overlay {
-    opacity: 0;
-}
-
-.chris-avatar:hover .chris-overlay {
-    opacity: 1;
-}
-
-.chris-overlay {
-    opacity: 0;
-}
-
-.chris-avatar:hover .chris-original {
-    opacity: 0.5;
-    background-color: white;
+.about-text ul,
+.about-text p {
+    font-size: 1.5em;
+    color: #fff;
+    padding: 0 20px;
 }
 
 .about-text ul li {
@@ -254,6 +273,7 @@ nav ul a:hover,
 #projects {
     background-color: #fff;
     margin: 0 auto;
+    border-bottom: 3px solid lime;
 }
 
 #projects ul {
@@ -262,48 +282,10 @@ nav ul a:hover,
     grid-gap: 1em;
 }
 
-/* #projects figure {
-    position: relative;
-    padding: 1em;
-    background-color: lime;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    transition: all 0.3s ease-in-out;
-} */
-
 #projects figure img {
     width: 100%;
     border-radius: 8px;
-
-    /* object-fit: cover;
-    display: block;
-    mix-blend-mode: multiply;
-    filter: grayscale(100%) contrast(1);
-    transition: all 0.5s ease-in-out; */
 }
-
-/* #projects figure:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
-#projects figure::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: #23278A;
-    mix-blend-mode: lighten;
-    transition: all 0.5s ease-in-out;
-}
-
-#project figure:hover::after,
-#project figure:hover,
-#project figure:hover img {
-    filter: none;
-    mix-blend-mode: unset !important;
-    background: transparent;
-} */
 
 #projects h2 {
     font-family: "Press Start 2P";
@@ -325,6 +307,7 @@ nav ul a:hover,
         "skill-tiles";
     align-items: center;
     background: radial-gradient(circle, rgba(var(--DarkAmber), 1) 0%, rgba(0, 0, 0, 1) 100%);
+    border-bottom: 3px solid rgba(var(--Amber), 1);
 }
 
 #skill-heading {
@@ -402,6 +385,7 @@ nav ul a:hover,
 #contact {
     font-family: "Inconsolata-bold";
     min-height: 50vh;
+    border-bottom: 3px solid lime;
 }
 
 #contact h2 {
@@ -416,8 +400,28 @@ nav ul a:hover,
 /*-------------------------- FOOTER --------------------------*/
 
 .page-footer {
-    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 10px 20px;
     background-color: #000;
+    font-family: 'Press Start 2P', cursive;
+    color: lime;
+}
+
+.page-footer a {
+    color: lime;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+#copyright {
+    justify-self: left;
+}
+
+#ext-links {
+    margin-top: -10px;
+    justify-self: right;
 }
 
 /*-------------------------- MEDIA QUERIES --------------------------*/
@@ -427,6 +431,10 @@ nav ul a:hover,
     .console-container {
         font-size: 2em;
         background-position: 50%;
+    }
+
+    #about {
+        grid-template-columns: 1fr;
     }
 
     .skill-tiles {
@@ -443,5 +451,9 @@ nav ul a:hover,
             "milestone-5";
         background-color: #fff;
         margin: 0 auto;
+    }
+
+    #copyright {
+        font-size: .7em;
     }
 }
