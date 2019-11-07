@@ -18,6 +18,8 @@ $(document).ready(() => {
         edge: "right"
     });
 
+    $('.chips').chips();
+
     $("textarea#textarea1").characterCounter();
 
     //-------------------- NAVBAR --------------------//
@@ -109,10 +111,11 @@ $(document).ready(() => {
                 visible = true;
             }
         }, 400);
-    }
-
+    };
+    
     //-------------------- FOOTER SECTION --------------------//
 
     // Set the copyright year dynamically
-	$("#year").html(new Date().getFullYear());
+    $("#year").html(new Date().getFullYear());
+
 });
