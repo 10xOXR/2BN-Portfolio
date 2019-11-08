@@ -22,7 +22,7 @@ if(IsInjected($visitor_email))
     exit;
 }
 
-$email_from = 'chris@2bn.dev';//<== update the email address
+$email_from = 'form_submission@2bn.dev';
 $email_subject = $subject;
 $email_body = "From: $name.\n".
               "Subject: $subject \n".    
@@ -31,7 +31,7 @@ $email_body = "From: $name.\n".
               "Message:\n $message".
               
     
-$to = "chris@2bn.dev";//<== update the email address
+$to = "chris@2bn.dev";
 $headers = "From: $email_from \r\n";
 $headers .= "Reply-To: $visitor_email \r\n";
 //Send the email!

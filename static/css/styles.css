@@ -70,7 +70,7 @@ main {
     height: 90vh;
     width: 100%;
     color: lime;
-    background-image: url("/static/img/grid1.png");
+    background-image: url("/static/img/grid.png");
     background-position: 0% 60%;
     background-size: cover;
 }
@@ -271,18 +271,21 @@ nav ul a:hover,
 /*-------------------------- PROJECTS SECTION --------------------------*/
 
 #projects {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "projects-heading"
+        "flip-cards";
     justify-content: center;
     background: radial-gradient(circle, rgba(40, 61, 39, 1) 0%, rgba(0, 0, 0, 1) 100%);
     margin: 0 auto;
-    min-height: 50vh;
     font-family: "Inconsolata-bold";
     border-bottom: 3px solid lime;
     padding: 30px;
 }
 
 #projects #projects-heading {
+    grid-area: projects-heading;
     padding-bottom: 30px;
     font-family: "Press Start 2P";
     color: lime;
@@ -295,8 +298,9 @@ nav ul a:hover,
 }
 
 #projects .flip-cards {
+    grid-area: flip-cards;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(27em, 1fr));
+    grid-template-columns: 1fr 1fr;
     grid-gap: 3em;
 }
 
@@ -371,6 +375,12 @@ nav ul a:hover,
     font-size: 1.5em;
     background-color: #000;
     color: lime;
+    transition: all 0.5s ease-in-out;
+}
+
+#projects .flip-card-back .btn:hover {
+    background-color: lime;
+    color: #000;
 }
 
 #projects #project-chips {
@@ -521,6 +531,12 @@ nav ul a:hover,
     border: 3px solid lime;
     color: lime;
     background-color: #000;
+    transition: all 0.5s ease-in-out;
+}
+
+#contact .btn:hover {
+    background-color: lime;
+    color: #000;
 }
 
 /*-------------------------- FOOTER --------------------------*/
@@ -562,6 +578,11 @@ nav ul a:hover,
     #about {
         grid-template-columns: 1fr;
     }
+
+    #projects .flip-cards {
+        grid-template-columns: 1fr;
+    }
+
 
     #projects .flip-card {
         width: 90vw;

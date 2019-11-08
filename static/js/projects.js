@@ -64,4 +64,3 @@ $(document).ready(() => {
     $("#projects").append(proj_list);
 
 });
-
