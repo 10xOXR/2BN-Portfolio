@@ -33,35 +33,35 @@ $(document).ready(() => {
 
         if ($(window).scrollTop() >= top && $(window).scrollTop() <= about) {
             $("#nav-home").addClass("active-section");
-            $("#sidenav-home").css("color", "rgba(var(--Amber), 1)");
+            $("#sidenav-home").css("color", "rgba(var(--amber), 1)");
         } else {
             $("#nav-home").removeClass("active-section");
             $("#sidenav-home").css("color", "lime");
         }
         if ($(window).scrollTop() >= about && $(window).scrollTop() <= projects) {
             $("#nav-about").addClass("active-section");
-            $("#sidenav-about").css("color", "rgba(var(--Amber), 1)");
+            $("#sidenav-about").css("color", "rgba(var(--amber), 1)");
         } else {
             $("#nav-about").removeClass("active-section");
             $("#sidenav-about").css("color", "lime");
         }
         if ($(window).scrollTop() >= projects && $(window).scrollTop() <= skills) {
             $("#nav-projects").addClass("active-section");
-            $("#sidenav-projects").css("color", "rgba(var(--Amber), 1)");
+            $("#sidenav-projects").css("color", "rgba(var(--amber), 1)");
         } else {
             $("#nav-projects").removeClass("active-section");
             $("#sidenav-projects").css("color", "lime");
         }
         if ($(window).scrollTop() >= skills && $(window).scrollTop() <= contact) {
             $("#nav-skills").addClass("active-section");
-            $("#sidenav-skills").css("color", "rgba(var(--Amber), 1)");
+            $("#sidenav-skills").css("color", "rgba(var(--amber), 1)");
         } else {
             $("#nav-skills").removeClass("active-section");
             $("#sidenav-skills").css("color", "lime");
         }
         if ($(window).scrollTop() >= contact) {
             $("#nav-contact").addClass("active-section");
-            $("#sidenav-contact").css("color", "rgba(var(--Amber), 1)");
+            $("#sidenav-contact").css("color", "rgba(var(--amber), 1)");
         } else {
             $("#nav-contact").removeClass("active-section");
             $("#sidenav-contact").css("color", "lime");

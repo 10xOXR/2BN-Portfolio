@@ -8,11 +8,6 @@
 }
 
 @font-face {
-    font-family: "Inconsolata-regular";
-    src: url("/static/fonts/Inconsolata-Regular.ttf") format("truetype");
-}
-
-@font-face {
     font-family: "Inconsolata-bold";
     src: url("/static/fonts/Inconsolata-Bold.ttf") format("truetype");
 }
@@ -20,9 +15,18 @@
 /* ROOT VARS */
 
 :root {
-    --Amber: 239, 121, 0;
-    --LightAmber: 255, 170, 16;
-    --DarkAmber: 80, 20, 0;
+    --amber: 239, 121, 0;
+    --black: 0, 0, 0;
+    --blue: 0, 0, 255;
+    --crtDark: 18, 16, 16;
+    --crtBlue: 0, 30, 255;
+    --crtRed: 255, 0, 80;
+    --darkAmber: 80, 20, 0;
+    --darkGreen: 40, 61, 39;
+    --grey: 187, 187, 187;
+    --lime: 0, 255, 0;
+    --red: 255, 0, 0;
+    --white: 255, 255, 255;
 }
 
 /* HEADING SIZES */
@@ -53,7 +57,7 @@ main {
 /*-------------------------- LANDING SECTION --------------------------*/
 
 #hero-landing {
-    background: radial-gradient(circle, rgba(40, 61, 39, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: radial-gradient(circle, rgba(var(--darkGreen), 1) 0%, rgba(var(--black), 1) 100%);
 }
 
 .hidden {
@@ -69,7 +73,7 @@ main {
     font-size: 3em;
     height: 90vh;
     width: 100%;
-    color: lime;
+    color: rgb(var(--lime));
     background-image: url("/static/img/grid.png");
     background-position: 0% 60%;
     background-size: cover;
@@ -87,7 +91,7 @@ main {
     left: 0;
     bottom: 0;
     right: 0;
-    background: rgba(18, 16, 16, 0.1);
+    background: rgba(var(--crtDark), 0.1);
     opacity: 0;
     height: 90vh;
     pointer-events: none;
@@ -102,7 +106,7 @@ main {
     left: 0;
     bottom: 0;
     right: 0;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background: linear-gradient(rgba(var(--crtDark), 0) 50%, rgba(var(--black), 0.25) 50%), linear-gradient(90deg, rgba(var(--red), 0.06), rgba(var(--lime), 0.02), rgba(var(--blue), 0.06));
     background-size: 100% 2px, 3px 100%;
     height: 90vh;
     pointer-events: none;
@@ -141,27 +145,27 @@ main {
 }
 
 @keyframes textShadow {
-    0% {text-shadow: 0.4389924193300864px 0 1px rgba(0, 30, 255, 0.5), -0.4389924193300864px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;}
-    5% {text-shadow: 2.7928974010788217px 0 1px rgba(0, 30, 255, 0.5), -2.7928974010788217px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;}
-    10% {text-shadow: 0.02956275843481219px 0 1px rgba(0, 30, 255, 0.5), -0.02956275843481219px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;}
-    15% { text-shadow: 0.40218538552878136px 0 1px rgba(0, 30, 255, 0.5), -0.40218538552878136px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;}
-    20% {text-shadow: 3.4794037899852017px 0 1px rgba(0, 30, 255, 0.5), -3.4794037899852017px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;}
-    25% {text-shadow: 1.6125630401149584px 0 1px rgba(0, 30, 255, 0.5), -1.6125630401149584px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;}
-    30% {text-shadow: 0.7015590085143956px 0 1px rgba(0, 30, 255, 0.5), -0.7015590085143956px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;}
-    35% {text-shadow: 3.896914047650351px 0 1px rgba(0, 30, 255, 0.5), -3.896914047650351px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;}
-    40% {text-shadow: 3.870905614848819px 0 1px rgba(0, 30, 255, 0.5), -3.870905614848819px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;}
-    45% {text-shadow: 2.231056963361899px 0 1px rgba(0, 30, 255, 0.5), -2.231056963361899px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;}
-    50% {text-shadow: 0.08084290417898504px 0 1px rgba(0, 30, 255, 0.5), -0.08084290417898504px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;}
-    55% {text-shadow: 2.3758461067427543px 0 1px rgba(0, 30, 255, 0.5), -2.3758461067427543px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;}
-    60% {text-shadow: 2.202193051050636px 0 1px rgba(0, 30, 255, 0.5), -2.202193051050636px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;}
-    65% {text-shadow: 2.8638780614874975px 0 1px rgba(0, 30, 255, 0.5), -2.8638780614874975px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;}
-    70% {text-shadow: 0.48874025155497314px 0 1px rgba(0, 30, 255, 0.5), -0.48874025155497314px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;}
-    75% {text-shadow: 1.8948491305757957px 0 1px rgba(0, 30, 255, 0.5), -1.8948491305757957px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px; }
-    80% {text-shadow: 0.0833037308038857px 0 1px rgba(0, 30, 255, 0.5), -0.0833037308038857px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;}
-    85% {text-shadow: 0.09769827255241735px 0 1px rgba(0, 30, 255, 0.5), -0.09769827255241735px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;}
-    90% {text-shadow: 3.443339761481782px 0 1px rgba(0, 30, 255, 0.5), -3.443339761481782px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;}
-    95% {text-shadow: 2.1841838852799786px 0 1px rgba(0, 30, 255, 0.5), -2.1841838852799786px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;}
-    100% {text-shadow: 2.6208764473832513px 0 1px rgba(0, 30, 255, 0.5), -2.6208764473832513px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;}
+    0% {text-shadow: 0.4389924193300864px 0 1px rgba(var(--crtBlue), 0.5), -0.4389924193300864px 0 1px rgba(var(--crtRed), 0.3), 0 0 3px;}
+    5% {text-shadow: 2.7928974010788217px 0 1px rgba(var(--crtBlue), 0.5), -2.7928974010788217px 0 1px rgba(var(--crtRed), 0.3), 0 0 3px;}
+    10% {text-shadow: 0.02956275843481219px 0 1px rgba(var(--crtBlue), 0.5), -0.02956275843481219px 0 1px rgba(var(--crtRed), 0.3), 0 0 3px;}
+    15% { text-shadow: 0.40218538552878136px 0 1px rgba(var(--crtBlue), 0.5), -0.40218538552878136px 0 1px rgba(var(--crtRed), 0.3), 0 0 3px;}
+    20% {text-shadow: 3.4794037899852017px 0 1px rgba(var(--crtBlue), 0.5), -3.4794037899852017px 0 1px rgba(var(--crtRed), 0.3), 0 0 3px;}
+    25% {text-shadow: 1.6125630401149584px 0 1px rgba(var(--crtBlue), 0.5), -1.6125630401149584px 0 1px rgba(var(--crtRed), 0.3), 0 0 3px;}
+    30% {text-shadow: 0.7015590085143956px 0 1px rgba(var(--crtBlue), 0.5), -0.7015590085143956px 0 1px rgba(var(--crtRed), 0.3), 0 0 3px;}
+    35% {text-shadow: 3.896914047650351px 0 1px rgba(var(--crtBlue), 0.5), -3.896914047650351px 0 1px rgba(var(--crtRed), 0.3), 0 0 3px;}
+    40% {text-shadow: 3.870905614848819px 0 1px rgba(var(--crtBlue), 0.5), -3.870905614848819px 0 1px rgba(var(--crtRed), 0.3), 0 0 3px;}
+    45% {text-shadow: 2.231056963361899px 0 1px rgba(var(--crtBlue), 0.5), -2.231056963361899px 0 1px rgba(var(--crtRed), 0.3), 0 0 3px;}
+    50% {text-shadow: 0.08084290417898504px 0 1px rgba(var(--crtBlue), 0.5), -0.08084290417898504px 0 1px rgba(var(--crtRed), 0.3), 0 0 3px;}
+    55% {text-shadow: 2.3758461067427543px 0 1px rgba(var(--crtBlue), 0.5), -2.3758461067427543px 0 1px rgba(var(--crtRed), 0.3), 0 0 3px;}
+    60% {text-shadow: 2.202193051050636px 0 1px rgba(var(--crtBlue), 0.5), -2.202193051050636px 0 1px rgba(var(--crtRed), 0.3), 0 0 3px;}
+    65% {text-shadow: 2.8638780614874975px 0 1px rgba(var(--crtBlue), 0.5), -2.8638780614874975px 0 1px rgba(var(--crtRed), 0.3), 0 0 3px;}
+    70% {text-shadow: 0.48874025155497314px 0 1px rgba(var(--crtBlue), 0.5), -0.48874025155497314px 0 1px rgba(var(--crtRed), 0.3), 0 0 3px;}
+    75% {text-shadow: 1.8948491305757957px 0 1px rgba(var(--crtBlue), 0.5), -1.8948491305757957px 0 1px rgba(var(--crtRed), 0.3), 0 0 3px; }
+    80% {text-shadow: 0.0833037308038857px 0 1px rgba(var(--crtBlue), 0.5), -0.0833037308038857px 0 1px rgba(var(--crtRed), 0.3), 0 0 3px;}
+    85% {text-shadow: 0.09769827255241735px 0 1px rgba(var(--crtBlue), 0.5), -0.09769827255241735px 0 1px rgba(var(--crtRed), 0.3), 0 0 3px;}
+    90% {text-shadow: 3.443339761481782px 0 1px rgba(var(--crtBlue), 0.5), -3.443339761481782px 0 1px rgba(var(--crtRed), 0.3), 0 0 3px;}
+    95% {text-shadow: 2.1841838852799786px 0 1px rgba(var(--crtBlue), 0.5), -2.1841838852799786px 0 1px rgba(var(--crtRed), 0.3), 0 0 3px;}
+    100% {text-shadow: 2.6208764473832513px 0 1px rgba(var(--crtBlue), 0.5), -2.6208764473832513px 0 1px rgba(var(--crtRed), 0.3), 0 0 3px;}
 }
 
 /*-------------------------- NAVBAR --------------------------*/
@@ -172,24 +176,24 @@ nav {
     line-height: 56px;
     height: 56px;
     z-index: 10;
-    background-color: #000;
-    border-top: 1px solid #000;
-    box-shadow: 0 4px 16px 0 rgba(var(--Amber), 0.5);
+    background-color: rgb(var(--black));
+    border-top: 1px solid rgb(var(--black));
+    box-shadow: 0 4px 16px 0 rgba(var(--amber), 0.5);
 }
 
 nav ul a {
-    color: lime;
+    color: rgb(var(--lime));
     font-family: "Press Start 2P";
     transition: all .3s ease-in-out;
 }
 
 nav ul a:hover,
 .active-section {
-    color: rgba(var(--Amber), 1);
+    color: rgba(var(--amber), 1);
 }
 
 .sidenav-trigger .fas {
-    color: lime;
+    color: rgb(var(--lime));
 }
 
 #mobile-menu {
@@ -197,7 +201,7 @@ nav ul a:hover,
     align-items: center;
     justify-items: center;;
     grid-template-columns: 1fr;
-    background-color: #000;
+    background-color: rgb(var(--black));
     font-family: "Press Start 2P";
 }
 
@@ -206,9 +210,9 @@ nav ul a:hover,
     align-self: flex-start;
     width: 100%;
     padding: 20px 5px;
-    border-top: 3px solid rgba(var(--Amber), 1);
-    border-bottom: 3px solid rgba(var(--Amber), 1);
-    background: radial-gradient(circle, rgba(var(--DarkAmber), 1) 0%, rgba(0, 0, 0, 1) 100%);
+    border-top: 3px solid rgba(var(--amber), 1);
+    border-bottom: 3px solid rgba(var(--amber), 1);
+    background: radial-gradient(circle, rgba(var(--darkAmber), 1) 0%, rgba(var(--black), 1) 100%);
 }
 
 #sidenav-home {
@@ -216,13 +220,13 @@ nav ul a:hover,
 }
 
 .sidenav-footer {
-    color: lime;
+    color: rgb(var(--lime));
     font-size: 3em;
     text-align: center;
 }
 
 .sidenav-footer a i {
-    color: lime;
+    color: rgb(var(--lime));
 }
 
 .brand-logo img {
@@ -234,15 +238,15 @@ nav ul a:hover,
 
 #about {
     font-family: "Inconsolata-bold";
-    background: radial-gradient(circle, rgba(var(--DarkAmber), 1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: radial-gradient(circle, rgba(var(--darkAmber), 1) 0%, rgba(var(--black), 1) 100%);
     padding-bottom: 30px;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
-    border-bottom: 3px solid rgba(var(--Amber), 1);
+    text-shadow: 2px 2px 2px rgba(var(--black), 1);
+    border-bottom: 3px solid rgba(var(--amber), 1);
 }
 
 #about h2 {
     font-family: 'Press Start 2P', cursive;
-    color: lime;
+    color: rgb(var(--lime));
 }
 
 .chris-avatar {
@@ -259,7 +263,7 @@ nav ul a:hover,
 .about-text ul,
 .about-text p {
     font-size: 1.5em;
-    color: #fff;
+    color: rgb(var(--white));
     padding: 0 20px;
 }
 
@@ -277,10 +281,10 @@ nav ul a:hover,
         "projects-heading"
         "flip-cards";
     justify-content: center;
-    background: radial-gradient(circle, rgba(40, 61, 39, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: radial-gradient(circle, rgba(var(--darkGreen), 1) 0%, rgba(var(--black), 1) 100%);
     margin: 0 auto;
     font-family: "Inconsolata-bold";
-    border-bottom: 3px solid lime;
+    border-bottom: 3px solid rgb(var(--lime));
     padding: 30px;
 }
 
@@ -288,7 +292,7 @@ nav ul a:hover,
     grid-area: projects-heading;
     padding-bottom: 30px;
     font-family: "Press Start 2P";
-    color: lime;
+    color: rgb(var(--lime));
     margin: 0;
 }
 
@@ -313,7 +317,7 @@ nav ul a:hover,
 }
 
 #projects .flip-cards p {
-    color: #fff;
+    color: rgb(var(--white));
     padding: 10px 0;
 }
 
@@ -344,17 +348,17 @@ nav ul a:hover,
 }
 
 #projects .flip-card-front {
-    border: 3px solid lime;
-    background-color: #bbb;
-    color: black;
+    border: 3px solid rgb(var(--lime));
+    background-color: rgb(var(--grey));
+    color: rgb(var(--black));
 }
 
 #projects .flip-card-back {
     display: grid;
     align-content: center;
-    background: radial-gradient(circle, rgba(var(--DarkAmber), 1) 0%, rgba(0, 0, 0, 1) 100%);
-    border: 3px solid rgba(var(--Amber), 1);
-    color: white;
+    background: radial-gradient(circle, rgba(var(--darkAmber), 1) 0%, rgba(var(--black), 1) 100%);
+    border: 3px solid rgba(var(--amber), 1);
+    color: rgb(var(--white));;
     transform: rotateY(180deg);
     padding: 10px;
 }
@@ -371,16 +375,16 @@ nav ul a:hover,
 #projects .flip-card-back .btn {
     line-height: 30px;
     border-radius: 8px;
-    border: 3px solid lime;
+    border: 3px solid rgb(var(--lime));
     font-size: 1.5em;
-    background-color: #000;
-    color: lime;
+    background-color: rgb(var(--black));
+    color: rgb(var(--lime));
     transition: all 0.5s ease-in-out;
 }
 
 #projects .flip-card-back .btn:hover {
-    background-color: lime;
-    color: #000;
+    background-color: rgb(var(--lime));
+    color: rgb(var(--black));
 }
 
 #projects #project-chips {
@@ -388,17 +392,17 @@ nav ul a:hover,
 }
 
 #projects .chip {
-    background-color: #000;
-    color: #fff;
-    border: 2px solid lime;
+    background-color: rgb(var(--black));
+    color: rgb(var(--white));
+    border: 2px solid rgb(var(--lime));
     line-height: 28px;
 }
 
 #projects .chip img {
     width: 30px;
     height: 30px;
-    background-color: #000;
-    border: 2px solid lime;
+    background-color: rgb(var(--black));
+    border: 2px solid rgb(var(--lime));
     margin: -1px 8px 0 -14px;
 }
 
@@ -413,13 +417,13 @@ nav ul a:hover,
         "skills-para"
         "skill-tiles";
     align-items: center;
-    background: radial-gradient(circle, rgba(var(--DarkAmber), 1) 0%, rgba(0, 0, 0, 1) 100%);
-    border-bottom: 3px solid rgba(var(--Amber), 1);
+    background: radial-gradient(circle, rgba(var(--darkAmber), 1) 0%, rgba(var(--black), 1) 100%);
+    border-bottom: 3px solid rgba(var(--amber), 1);
 }
 
 #skill-heading {
     grid-area: skills-heading;
-    color: lime;
+    color: rgb(var(--lime));
     font-family: "Press Start 2P";
     margin: 0 auto;
 }
@@ -427,7 +431,7 @@ nav ul a:hover,
 #skills p {
     grid-area: skills para;
     font-family: "Inconsolata-bold";
-    color: #fff;
+    color: rgb(var(--white));
     text-align: center;
     font-size: 1.5em;
     padding: 0 2em 1em 2em;
@@ -444,9 +448,9 @@ nav ul a:hover,
     position: relative;
     overflow: hidden;
     font-family: "Inconsolata-bold";
-    border: 3px solid lime;
+    border: 3px solid rgb(var(--lime));
     border-radius: 8px;
-    background-color: rgba(0, 255, 0, 0.2);
+    background-color: rgba(var(--lime), 0.2);
     margin: 15px;
     transition: all .3s ease-in-out;
 }
@@ -463,22 +467,22 @@ nav ul a:hover,
 .skill-tiles figure figcaption {
     position: absolute;
     opacity: 0;
-    background-color: rgba(var(--Amber), 0.7);
+    background-color: rgba(var(--amber), 0.7);
     width: 100%;
     height: 100%;
-    color: #fff;
+    color: rgb(var(--white));
     font-size: 2em;
     transition: all .5s ease-in-out;
     top: -35vh;
     z-index: 5;
     text-align: center;
     padding: 2.4em 0;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    text-shadow: 2px 2px 2px rgba(var(--black), 1);
 }
 
 .skill-tiles figure:hover {
-    border: 3px solid rgba(var(--Amber), 1);
-    background-color: rgba(var(--Amber ), 0.2);
+    border: 3px solid rgba(var(--amber), 1);
+    background-color: rgba(var(--amber), 0.2);
 }
 
 .skill-tiles figure:hover figcaption {
@@ -490,22 +494,22 @@ nav ul a:hover,
 /*-------------------------- CONTACT SECTION --------------------------*/
 
 #contact {
-    background: radial-gradient(circle, rgba(40, 61, 39, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: radial-gradient(circle, rgba(var(--darkGreen), 1) 0%, rgba(var(--black), 1) 100%);
     font-family: "Inconsolata-bold";
-    border-bottom: 3px solid lime;
+    border-bottom: 3px solid rgb(var(--lime));
     padding-bottom: 30px;
 }
 
 #contact h2 {
     margin: 0;
     font-family: 'Press Start 2P', cursive;
-    color: lime;
+    color: rgb(var(--lime));
     padding: 30px 10px;
 }
 
 #contact p {
-    color: #fff;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    color: rgb(var(--white));
+    text-shadow: 2px 2px 2px rgba(var(--black), 1);
     font-size: 1.5em;
     padding: 0 2em;
 }
@@ -515,12 +519,12 @@ nav ul a:hover,
 }
 
 #contact .input-field label {
-    color: lime;
+    color: rgb(var(--lime));
 }
 
 #contact input,
 #contact textarea {
-    color: #fff;
+    color: rgb(var(--white));
 }
 
 #contact .btn {
@@ -528,15 +532,15 @@ nav ul a:hover,
     line-height: 30px;
     border-radius: 8px;
     font-size: 1.5em;
-    border: 3px solid lime;
-    color: lime;
-    background-color: #000;
+    border: 3px solid rgb(var(--lime));
+    color: rgb(var(--lime));
+    background-color: rgb(var(--black));
     transition: all 0.5s ease-in-out;
 }
 
 #contact .btn:hover {
-    background-color: lime;
-    color: #000;
+    background-color: rgb(var(--lime));
+    color: rgb(var(--black));
 }
 
 /*-------------------------- FOOTER --------------------------*/
@@ -546,13 +550,13 @@ nav ul a:hover,
     grid-template-columns: 1fr 1fr;
     align-items: center;
     padding: 10px 20px;
-    background-color: #000;
+    background-color: rgb(var(--black));
     font-family: 'Press Start 2P', cursive;
-    color: lime;
+    color: rgb(var(--lime));
 }
 
 .page-footer a {
-    color: lime;
+    color: rgb(var(--lime));
     text-decoration: none;
     font-size: 2em;
 }
@@ -575,14 +579,10 @@ nav ul a:hover,
         background-position: 50%;
     }
 
-    #about {
-        grid-template-columns: 1fr;
-    }
-
+    #about,
     #projects .flip-cards {
         grid-template-columns: 1fr;
     }
-
 
     #projects .flip-card {
         width: 90vw;
