@@ -596,7 +596,7 @@ nav ul a:hover,
     .skill-tiles {
         padding: unset;
         padding-bottom: 1.5em;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }   
 
     #copyright {
