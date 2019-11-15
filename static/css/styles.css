@@ -597,7 +597,12 @@ nav ul a:hover,
         padding: unset;
         padding-bottom: 1.5em;
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    }   
+    }
+
+    .skill-tiles figure figcaption {
+        font-size: 1.1em;
+        padding: 2.5em 0;
+    }
 
     #copyright {
         font-size: .7em;

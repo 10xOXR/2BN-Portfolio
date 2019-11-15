@@ -29,7 +29,7 @@ $(document).ready(() => {
             ]
         },
         {
-            name: "The Unicorn Attractor - Issue Tracker",
+            name: "The Unicorn Attractor",
             img: "static/img/portfolio/ms5.png",
             alt: "CI Milestone 5",
             repo: "https://github.com/10xOXR/2BN-Milestone-5",
