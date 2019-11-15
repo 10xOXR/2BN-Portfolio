@@ -574,6 +574,10 @@ nav ul a:hover,
 
 @media (max-width: 874px) {
 
+    .brand-logo img {
+        width: 250px;
+    }
+
     .console-container {
         font-size: 2em;
         background-position: 50%;
@@ -592,7 +596,8 @@ nav ul a:hover,
     .skill-tiles {
         padding: unset;
         padding-bottom: 1.5em;
-    }
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }   
 
     #copyright {
         font-size: .7em;
